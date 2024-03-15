@@ -36,7 +36,7 @@ class WalletTrackerBot:
         await context.bot.send_message(chat_id=chat_id, text="Hello! I am your BaseScan wallet tracking bot.")
 
     async def check_new_transactions(self):
-        tracked_addresses = tracked_addresses = ['0x5aFFDEb3C6bC653C70e21bd2bAa4B228Ae63F1dF','0x1985EA6E9c68E1C272d8209f3B478AC2Fdb25c87','0x89E6179A5a69d2Da30f061CA9e09eBDCC0423333','0xa338B75BA3fD53DD25054B70A423493F3d2B0CC6','0x612C45551195f15Bf05D722b9f137C914b077FC7','0xaD63E4d4Be2229B080d20311c1402A2e45Cf7E75','0xCeBad81c2236F4fc0F4592e802932D8677bB201D']
+        tracked_addresses = tracked_addresses = ['0x5aFFDEb3C6bC653C70e21bd2bAa4B228Ae63F1dF','0x89E6179A5a69d2Da30f061CA9e09eBDCC0423333','0xa338B75BA3fD53DD25054B70A423493F3d2B0CC6','0x612C45551195f15Bf05D722b9f137C914b077FC7','0xaD63E4d4Be2229B080d20311c1402A2e45Cf7E75','0xCeBad81c2236F4fc0F4592e802932D8677bB201D']
         for address in tracked_addresses:
             last_hash = get_last_hash(address)
             logging.info(f"Checking new transactions for {address}. Last hash: {last_hash}")
